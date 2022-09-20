@@ -14,3 +14,4 @@ FastDeploy
 
     build_and_install/index
     quick_start/index
+    references/api_reference.md

@@ -47,7 +47,7 @@ with open(os.path.join(TOP_DIR, "python", "requirements.txt")) as fin:
 
 setup_configs = dict()
 setup_configs["ENABLE_PADDLE_FRONTEND"] = os.getenv("ENABLE_PADDLE_FRONTEND",
-                                                    "ON")
+                                                    "OFF")
 setup_configs["ENABLE_ORT_BACKEND"] = os.getenv("ENABLE_ORT_BACKEND", "OFF")
 setup_configs["ENABLE_OPENVINO_BACKEND"] = os.getenv("ENABLE_OPENVINO_BACKEND",
                                                      "OFF")

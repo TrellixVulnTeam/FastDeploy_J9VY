@@ -12,7 +12,7 @@
 #
 # import os
 # import sys
-# sys.path.insert(0, os.path.abspath('..'))
+# sys.path.insert(0, os.path.abspath('../python'))
 from recommonmark.transform import AutoStructify
 from recommonmark.parser import CommonMarkParser
 
@@ -30,12 +30,17 @@ release = "develop"
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'sphinx.ext.napoleon',
+    'myst_parser',
     'sphinx.ext.autodoc',
     'sphinx.ext.mathjax',
     'sphinx_markdown_tables',
-    'sphinx.ext.napoleon',
-    'recommonmark',
+    'sphinx.ext.viewcode'
 ]
+
+autoclass_content = 'both'
+package_dir = {"": ["python"]}
+suppress_warnings = [ 'ref.myst']
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 # The suffix(es) of source filenames.

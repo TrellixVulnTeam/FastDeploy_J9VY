@@ -25,12 +25,24 @@ class FastDeployModel:
             self._runtime_option = option._option
 
     def model_name(self):
+        """Return model's name
+
+        :return: str
+        """
         return self._model.model_name()
 
     def num_inputs(self):
+        """Return number of models' input tensor
+
+        :return: int
+        """
         return self._model.num_inputs()
 
     def num_outputs(self):
+        """Return number of models' output tensor
+       
+        :return: int
+        """
         return self._model.num_outputs()
 
     def get_input_info(self, index):
@@ -46,12 +58,26 @@ class FastDeployModel:
         return self._model.get_output_info(index)
 
     def enable_record_time_of_runtime(self):
+        """Enable recording the time of backend runtime
+
+        :return: None
+        """
         self._model.enable_record_time_of_runtime()
 
     def disable_record_time_of_runtime(self):
+        """Disable recording the time of backend runtime
+
+        :return: None
+        """
         self._model.disable_record_time_of_runtime()
 
     def print_statis_info_of_runtime(self):
+        """Display the time statis information of runtime, 
+        only availabel after call enable_record_time_of_runtime()
+
+        :return: None
+        """
+
         return self._model.print_statis_info_of_runtime()
 
     @property
